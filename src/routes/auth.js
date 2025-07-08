@@ -7,7 +7,7 @@ router.get('/login', verifyToken, (req, res) => {
   res.send('Login route');
 });
 
-router.get('/signup', (req, res) => {
+router.get('/signup', verifyToken, (req, res) => {
   res.send('Sign Up route');
 });
 
