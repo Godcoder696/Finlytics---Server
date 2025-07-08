@@ -4,11 +4,11 @@ import verifyToken from '../middlewares/authMiddleware.js';
 const router = express.Router();
 
 router.get('/login', verifyToken, (req, res) => {
-  res.send('Login route');
+  res.json({ message: 'Login route' });
 });
 
 router.get('/signup', verifyToken, (req, res) => {
-  res.send('Sign Up route');
+  res.json({ message: 'Signup route' });
 });
 
 export default router;
