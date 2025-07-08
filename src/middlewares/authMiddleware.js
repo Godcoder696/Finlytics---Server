@@ -1,4 +1,4 @@
-import admin from '../utility/firebaseInit.js';
+// import admin from '../utility/firebaseInit.js';
 
 const verifyToken= (req, res, next)=>{
     try {
