@@ -2,4 +2,14 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-const baseURL= "";
+const PORT= process.env.PORT || 4000;
+
+const CLOUDINARY_NAME=process.env.CLOUDINARY_NAME;
+const CLOUDINARY_API_KEY=process.env.CLOUDINARY_API_KEY;
+const CLOUDINARY_API_SECRET=process.env.CLOUDINARY_API_SECRET;
+
+const EMAIL_SENDER=process.env.EMAIL_SENDER;
+const EMAIL_PASSWORD=process.env.EMAIL_PASSWORD;
+
+
+export {PORT,CLOUDINARY_NAME,CLOUDINARY_API_KEY,CLOUDINARY_API_SECRET,EMAIL_SENDER,EMAIL_PASSWORD}
