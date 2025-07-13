@@ -1,4 +1,5 @@
 import express from 'express';
+import Transactions from '../models/Transactions.js';
 
 const router= express.Router();
 
