@@ -28,7 +28,7 @@ const Transactions= mongoose.Schema({
         type: String
     },
     transactionTime: {
-        type: Timestamp,
+        type: String,
         default: Date.now()
     }
 });

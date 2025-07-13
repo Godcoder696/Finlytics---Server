@@ -7,6 +7,7 @@ import forecastRouter from './routes/forecastRouter.js'
 import transactionRouter from './routes/transactionRouter.js'
 import budgetRouter from './routes/budgetRouter.js'
 import { PORT } from './constants.js';
+import connectDB from './utility/connectDB.js';
 
 const app = express();
 
@@ -22,7 +23,8 @@ app.use("/budget",budgetRouter);
 app.use("/forecast",forecastRouter);
 app.use("/transaction",transactionRouter);
 
-app.listen(PORT, () => {
+app.listen(PORT, async () => {
   console.log('Server is running on port ' + PORT);
+  await connectDB();
 });
 

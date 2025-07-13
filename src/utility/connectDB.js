@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { DB_URI } from "../constants";
+import { DB_URI } from "../constants.js";
 
 
 async function connectDB() {
