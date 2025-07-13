@@ -25,6 +25,6 @@ app.use("/transaction",transactionRouter);
 
 app.listen(PORT, async () => {
   console.log('Server is running on port ' + PORT);
-  await connectDB();
+  // await connectDB();
 });
 
