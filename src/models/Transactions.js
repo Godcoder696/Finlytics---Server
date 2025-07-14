@@ -1,9 +1,10 @@
 import mongoose from "mongoose";
 
 
-const Transactions= mongoose.Schema({
+const Transaction= mongoose.Schema({
     userId: {
-        type: mongoose.Schema.Types.ObjectId,
+        // type: mongoose.Schema.Types.ObjectId,
+        type: String,
         required: true
     },
     transactionType: {
@@ -16,21 +17,18 @@ const Transactions= mongoose.Schema({
     },
     transactionDate: {
         type: Date,
-        required: true
+        default: Date.now()
     },
     transactionMonth: {
-        type: Date
+        type: String
     },
     transactionYear: {
         type: String
     },
     tag: {
         type: String
-    },
-    transactionTime: {
-        type: String,
-        default: Date.now()
     }
 });
 
-export default mongoose.model("Transactions",Transactions);
+const Transactions= mongoose.models.Transactions || mongoose.model("Transactions",Transaction);
+export default Transactions;
