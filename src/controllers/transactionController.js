@@ -1,6 +1,4 @@
-import Transactions from "../models/Transactions.js"
 import { createTransactionService, deleteTransactionService, getAllTransactionsService, updateTransactionService } from "../services/transactionService.js";
-import connectDB from "../utility/connectDB.js";
 
 
 export const createTransaction = async (req, res)=>{

@@ -6,6 +6,7 @@ const User= mongoose.Schema({
     },
     userName: {
         type: String,
+        default: null
     },
     email: {
         type: String,
@@ -14,10 +15,12 @@ const User= mongoose.Schema({
     },
     phoneNumber: {
         type: String,
-        unique: true
+        unique: true,
+        default: null
     },
     avatar: {
-        type: String
+        type: String,
+        default: null
     },
     budgetAlertt: {
         type: Boolean,
@@ -28,16 +31,20 @@ const User= mongoose.Schema({
         default: false
     },
     profession: {
-        type: String
+        type: String,
+        default: null
     },
     salary: {
-        type: Number
+        type: Number,
+        default: null
     },
     description: {
-        type: String
+        type: String,
+        default: null
     },
     lineOfWork: {
-        type: String
+        type: String,
+        default: null
     }
 })
 

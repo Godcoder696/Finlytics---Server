@@ -1,17 +1,13 @@
 import express from 'express';
+import verifyToken from '../middlewares/authMiddleware.js';
+import { deleteProfile, getProfile, updateProfile } from '../controllers/profileController.js';
 
 const router= express.Router();
 
-router.get("/",(req,res)=>{
-    res.json({msg:"get profile route"});
-});
+router.get("/",verifyToken, getProfile);
 
-router.post("/",(req,res)=>{
-    res.json({msg:"create profile route"});
-});
+router.delete("/",verifyToken, deleteProfile);
 
-router.put("/",(req,res)=>{
-    res.json({msg:"update profile route"});
-});
+router.put("/",verifyToken, updateProfile);
 
 export default router;
