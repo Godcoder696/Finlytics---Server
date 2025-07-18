@@ -14,8 +14,10 @@ mongoose.Schema({
         type: Number,
         default: 0
     },
-    forecastt: {
-        type: Number,
-        default: 0
+    forecastData: {
+        type: Object,
+        default: {}
     }
 })
+
+
